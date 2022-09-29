@@ -1,5 +1,3 @@
-import javax.print.PrintServiceLookup;
-
 public class PivotSum {
     static class Solution {
         public int pivotIndex(int[] nums) {
