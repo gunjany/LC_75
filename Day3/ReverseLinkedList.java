@@ -45,18 +45,22 @@ public class ReverseLinkedList {
 
             reverseList = head;
 
+            if(head == null){
+                return head;
+            }
+
             ListNode p,q,r;
             r = null;
             p = head;
             q= head.next;
-            while(p!= null){
+            while(q!= null){
                 p.next = r;
                 r= p;
                 p = q;
-                if(q!= null)
-                    q= q.next;
+                q= q.next;
             }
 
+            p.next = r;
             reverseList = p;
             return reverseList;            
         }
