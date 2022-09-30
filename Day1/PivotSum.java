@@ -1,3 +1,4 @@
+package Day1;
 public class PivotSum {
     static class Solution {
         public int pivotIndex(int[] nums) {

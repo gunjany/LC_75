@@ -1,3 +1,4 @@
+package Day1;
 class Solution {
     public int[] runningSum(int[] nums) {
         int[] output = new int[nums.length];
