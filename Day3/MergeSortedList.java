@@ -41,14 +41,6 @@ public static void append(ListNode head, int new_data)
         return;
     }
 
-    // public ListNode sortList(ListNode head){
-    //     ListNode head_list = head;
-    //     Boolean swap = true;
-    //     while(swap){
-
-    //     }
-    //     return head_list;
-    // }
 static class Solution {
     public ListNode  mergeTwoLists(ListNode list1, ListNode list2) {
         ListNode sortedList = new ListNode();
