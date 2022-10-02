@@ -31,12 +31,12 @@ public class Isomorphic {
             return equivalent;
 
         }
-
+    }
         public static void main(String[] args) {
             Solution solution = new Solution();
             String s = "badc"; // p = t; a = i; p = t; e = l; r = e || b=b; a=a; d=b; c=a
             String t = "baba";
             System.out.println(solution.isIsomorphic(t, s));
         }
-    }
+    
 }
