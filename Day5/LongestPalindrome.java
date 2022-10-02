@@ -1,32 +1,39 @@
 package Day5;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class LongestPalindrome {
     static class Solution {
         public int longestPalindrome(String s) {
-        int [] ch = new int[256];
-        int odd = 0 ;
+            
+            HashMap<Character,Integer> map = new HashMap<>();
+            int odd = 0 ;
         
-        int n = s.length();
-        for(int i =0;i <n;i++){
-            ch[s.charAt(i)] += 1;
-        }
-        
-        for(int i =0;i <256;i++){
-            if(ch[i] % 2 != 0){
-                odd++;
+            int n = s.length();
+            for(int i =0;i <n;i++){
+                if(map.get(s.charAt(i))!=null)
+                    map.put(s.charAt(i), map.get(s.charAt(i))+1);
+                else
+                    map.put(s.charAt(i), 1);
             }
-        }
-        if(odd >=1)
-            return (n-odd) +1;
-        
-        return n;
+
+            for(Map.Entry<Character, Integer> entry: map.entrySet()){
+                if(entry.getValue() %2 !=0)
+                    odd++;
+            }
+
+            if(odd >=1)
+                return (n-odd) +1;
+            
+            return n;
         }
             
     }
 
     public static void main(String[] args) {
         Solution solution = new Solution();
-        String string = "abccccdd";
+        String string = "adam";
         System.out.println(solution.longestPalindrome(string));
     }
     
