@@ -1,7 +1,4 @@
 package Day4;
-
-import java.security.DrbgParameters.NextBytes;
-
 public class MiddleNodeLL{
 
     static class ListNode {
