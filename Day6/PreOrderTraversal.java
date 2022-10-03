@@ -24,6 +24,7 @@ public class PreOrderTraversal {
     
     static class Solution {
         List<Integer> ans = new ArrayList<>();
+        
         public List<Integer> preorder(Node root) {
             if(root == null) return ans;
             ans.add(root.val);
